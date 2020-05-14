@@ -78,7 +78,7 @@ h3 {
 li > div {
 	/* background-color: white; */
 	max-height: 80px;
-	overflow-x: scroll;
+	overflow: hidden;
 }
 
 .control-module {
