@@ -32,7 +32,7 @@ var totalProcessNum = 0;
 
 
 function processModel () {
-	this.myCss = $('<div class="process"><span></span><h2>haha</h2></div>');
+	this.myCss = $('<div class="process"></div>');
 	this.memSize = Math.floor(Math.random() * 60 + 1);
 	this.pid = ++totalProcessNum;
 	this.priority = Math.floor(Math.random() * 3 + 1);
