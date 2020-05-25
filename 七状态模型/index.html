@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>七状态模型</title>
+	<link rel="stylesheet" href="css/main.css">
+	<script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script src="js/jquery.color-2.1.0.min.js"></script>
+</head>
+<body>
+	<div class="frame">
+		<h1 class="title-text">进程转换 七状态模型</h1>
+		<div>
+			<div class="right-block">
+				<div class="mem-info">
+					<span>总内存：100M</span>
+					<span>
+						已使用内存：<span id="usedMem"></span>M
+					</span>
+				</div>
+				<div class="runningPCB">
+					运行中进程的PCB
+					<br>------------------------
+					<span>PID：
+						<span id="rPid"></span>
+					</span>
+					<span>请求内存：
+						<span id="rMemory"></span>
+					</span>
+					<span>优先级：
+						<span id="rPriority"></span>
+					</span>
+				</div>
+				<div class="highlightPCB">
+					当前高亮进程的PCB
+					<br>---------------------------
+					<span>PID：
+						<span id="hPid"></span>
+					</span>
+					<span>请求内存：
+						<span id="hMemory"></span>
+					</span>
+					<span>优先级：
+						<span id="hPriority"></span>
+					</span>
+				</div>
+			</div><br>
+			<div class="display-module">
+				<ul>
+					<div class="mainMemory">
+						<ul>
+							<li>
+								<h3>Ready: </h3>
+								<div id="ready"></div>
+							</li>
+							<li>
+								<h3>Running: </h3>
+								<div id="running"></div>
+							</li>
+							<li>
+								<h3>Blocked: </h3>
+								<div id="blocked"></div>
+							</li>
+						</ul>
+					</div>
+					<div class="externalStorage">
+						<ul>
+							<li>
+								<h3>New: </h3>
+								<div id="new"></div>
+							</li>
+							<li>
+								<h3>Ready Suspend: </h3>
+								<div id="readySuspend"></div>
+							</li>
+							<li>
+								<h3>Blocked Suspend: </h3>
+								<div id="blockedSuspend"></div>
+							</li>
+						</ul>
+					</div>
+					<li>
+						<h3>Exit: </h3>
+						<div id="exit"></div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="control-module">
+			<a id="dispatch" href=#>Dispatch</a>
+			<a id="timeout" href=#>Timeout</a>
+			<a id="ewait" href=#>Event Wait</a>
+			<a id="eoccurs" href=#>Event Occurs</a>
+			<a id="create" href=#>Create</a>
+			<a id="admit" href=#>Admit</a>
+			<a id="release" href=#>Release</a>
+			<a href=# id="readyToSuspend">Ready Suspend</a>
+			<a href=# id="readyActivate">Ready Activate</a>
+			<a href=# id="blockedToSuspend">Blocked Suspend</a>
+			<a href=# id="blockedActivate">Blocked Activate</a>
+			<a href=# id="outsideEventOccurs">Event Occurs (outside)</a>
+		</div>
+	</div>
+	<script src="js/main.js"></script>
+</body>
+</html>
